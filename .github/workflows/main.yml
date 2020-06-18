@@ -1,0 +1,13 @@
+name: Main-actions
+
+on:
+  push
+  
+
+jobs:
+  make-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: lint
+      run: make lint
