@@ -1,4 +1,4 @@
-istall:
+install:
 	npm install
 
 brain-games:
