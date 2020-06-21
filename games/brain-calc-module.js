@@ -1,6 +1,6 @@
-const gameRule = 'What is the result of the expression?';
+import { getRandomNum } from '../src/utility.js';
 
-const getRandomNum = (max) => Math.floor(Math.random() * max);
+const gameRule = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = () => {
   const num1 = getRandomNum(1000);
