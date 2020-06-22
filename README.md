@@ -9,5 +9,5 @@
 | __Brain calc__ | [![asciicast](https://asciinema.org/a/uKa6pAX8dH99aVHWh4ZN5rFEN.png)](https://asciinema.org/a/uKa6pAX8dH99aVHWh4ZN5rFEN) |
 | __Brain gcd__ | [![asciicast](https://asciinema.org/a/QOaRbWvOs22X7dX0HdW5IF9BI.png)](https://asciinema.org/a/QOaRbWvOs22X7dX0HdW5IF9BI) |
 | __Brain progression__ | [![asciicast](https://asciinema.org/a/K3BgYrZc4vXVOSfsWoxYdSEsR.png)](https://asciinema.org/a/K3BgYrZc4vXVOSfsWoxYdSEsR) |
-| __Brain prime__ | [![asciicast](https://asciinema.org/a/KvuvA7GXCPzvnBkSz0gCkTo6H.png)](https://asciinema.org/a/KvuvA7GXCPzvnBkSz0gCkTo6H) |
+| __Brain prime__ | [![asciicast](https://asciinema.org/a/khUy72nUauHh01Flztq1qdDoR.png)](https://asciinema.org/a/khUy72nUauHh01Flztq1qdDoR) |
 
