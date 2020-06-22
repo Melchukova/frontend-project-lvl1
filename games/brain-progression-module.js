@@ -9,10 +9,11 @@ const getQuestionAndAnswer = () => {
   const step = getRandomNum(100);
   const getElOfProgrssion = (num) => startNum + step * num;
 
-  let question = '';
+  const progression = [];
   for (let i = 0; i < progressonLength; i += 1) {
-    question += ` ${i === indOfHidedElement ? '..' : getElOfProgrssion(i)}`;
+    progression.push(i === indOfHidedElement ? '..' : getElOfProgrssion(i));
   }
+  const question = progression.join(' ');
 
   const result = getElOfProgrssion(indOfHidedElement);
   return [question, String(result)];
