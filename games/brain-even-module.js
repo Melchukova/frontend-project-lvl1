@@ -1,6 +1,6 @@
 import { getRandomNum, tranclatePredicate } from '../src/utility.js';
 
-const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
   const num = getRandomNum(1000);

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import sayWelcome from '../src/cli.js';
+import printGreeting from '../src/cli.js';
 
-sayWelcome();
+printGreeting();

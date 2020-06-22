@@ -1,8 +1,8 @@
 const getRandomNum = (max) => Math.floor(Math.random() * max);
 
-const calcGcd = (a, b) => {
+const getGcd = (a, b) => {
   if (b) {
-    return calcGcd(b, a % b);
+    return getGcd(b, a % b);
   }
 
   return Math.abs(a);
@@ -19,7 +19,7 @@ const tranclatePredicate = (answer) => {
   }
 };
 
-const checkPrime = (num) => {
+const isPrime = (num) => {
   if (num === 1) return false;
 
   for (let i = 2; i < Math.sqrt(num); i += 1) {
@@ -30,5 +30,5 @@ const checkPrime = (num) => {
 };
 
 export {
-  getRandomNum, calcGcd, tranclatePredicate, checkPrime,
+  getRandomNum, getGcd, tranclatePredicate, isPrime,
 };

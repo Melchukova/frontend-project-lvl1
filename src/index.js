@@ -3,14 +3,14 @@ import readlineSync from 'readline-sync';
 const ask = (question) => readlineSync.question(`${question} `);
 const print = (text) => console.log(text);
 
-const greetingAndGetUserName = () => {
+const printGreetingAndGetUserName = () => {
   print('Welcome to the Brain Games!');
   const userName = ask('May I have your name?');
   print(`Hello, ${userName}!`);
   return userName;
 };
 
-const gameIteration = (gameModule) => {
+const isGameIterationCorrect = (gameModule) => {
   const [question, correctAnswer] = gameModule.getQuestionAndAnswer();
 
   print(`Question: ${question}`);
@@ -34,7 +34,7 @@ const printGameResult = (isWin, userName) => {
 };
 
 const playGame = (gameModule) => {
-  const userName = greetingAndGetUserName();
+  const userName = printGreetingAndGetUserName();
 
   const rule = gameModule.gameRule;
   print(rule);
@@ -45,7 +45,7 @@ const playGame = (gameModule) => {
 
   do {
     iterationNum += 1;
-    correct = gameIteration(gameModule);
+    correct = isGameIterationCorrect(gameModule);
   } while (iterationNum < iterationsAmount && correct);
 
   printGameResult(correct, userName);
