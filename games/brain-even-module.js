@@ -1,4 +1,4 @@
-import { getRandomNum, tranclatePredicate } from '../src/utility.js';
+import getRandomNum from '../src/utility.js';
 import playGame from '../src/index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -9,10 +9,11 @@ const getQuestionAndAnswer = () => {
   const num = getRandomNum(1000);
 
   const question = String(num);
-  const isEvenNum = isEven(num);
-  const result = tranclatePredicate(isEvenNum);
 
-  return [question, result];
+  const isEvenNum = isEven(num);
+  const answer = isEvenNum ? 'yes' : 'no';
+
+  return [question, answer];
 };
 
 const startGame = () => {

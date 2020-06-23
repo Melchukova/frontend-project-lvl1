@@ -1,39 +1,31 @@
-import { getRandomNum } from '../src/utility.js';
+import getRandomNum from '../src/utility.js';
 import playGame from '../src/index.js';
 
 const gameRule = 'What is the result of the expression?';
 
-const getQuestion = (operationNum, num1, num2) => {
+const getExpressionResult = (operationNum, num1, num2) => {
   switch (operationNum) {
-    case 0:
-      return `${num1} + ${num2}`;
-    case 1:
-      return `${num1} - ${num2}`;
-    case 2:
-    default:
-      return `${num1} * ${num2}`;
-  }
-};
-
-const getAnswer = (operationNum, num1, num2) => {
-  switch (operationNum) {
-    case 0:
+    case '+':
       return num1 + num2;
-    case 1:
+    case '-':
       return num1 - num2;
-    case 2:
-    default:
+    case '*':
       return num1 * num2;
+    default:
+      throw new Error(`Unknown sign number: ${operationNum}`);
   }
 };
 
 const getQuestionAndAnswer = () => {
+  const operators = ['+', '-', '*'];
   const num1 = getRandomNum(1000);
   const num2 = getRandomNum(1000);
-  const operationNum = getRandomNum(3);
+  const operatorInd = getRandomNum(2);
+  const operator = operators[operatorInd];
 
-  const question = getQuestion(operationNum, num1, num2);
-  const answer = getAnswer(operationNum, num1, num2);
+  const question = `${num1} ${operator} ${num2}`;
+
+  const answer = getExpressionResult(operator, num1, num2);
 
   return [question, String(answer)];
 };

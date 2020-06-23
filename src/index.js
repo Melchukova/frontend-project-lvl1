@@ -9,32 +9,23 @@ const playGame = (gameRule, getQuestionAndAnswer) => {
   const userName = ask('May I have your name?');
   print(`Hello, ${userName}!`);
 
-  if (!gameRule) return;
-
   print(gameRule);
 
-  let iterationNum = 0;
-  let correct = true;
-
-  do {
-    iterationNum += 1;
+  for (let i = 0; i < iterationsAmount; i += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
     print(`Question: ${question}`);
     const userAnswer = ask('Your answer:');
 
-    if (userAnswer === correctAnswer) {
-      print('Correct!');
-    } else {
+    if (userAnswer !== correctAnswer) {
       print(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-      correct = false;
+      print(`Let's try again, ${userName}!`);
+      return;
     }
-  } while (iterationNum < iterationsAmount && correct);
 
-  if (correct) {
-    print(`Congratulations, ${userName}!`);
-  } else {
-    print(`Let's try again, ${userName}!`);
+    print('Correct!');
   }
+
+  print(`Congratulations, ${userName}!`);
 };
 
 export default playGame;

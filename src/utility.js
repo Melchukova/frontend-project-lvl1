@@ -1,14 +1,3 @@
-const getRandomNum = (max) => Math.floor(Math.random() * max);
+const getRandomNum = (max) => Math.floor(Math.random() * (max + 1));
 
-const tranclatePredicate = (answer) => {
-  switch (answer) {
-    case true:
-      return 'yes';
-    case false:
-      return 'no';
-    default:
-      return undefined;
-  }
-};
-
-export { getRandomNum, tranclatePredicate };
+export default getRandomNum;

@@ -1,4 +1,4 @@
-import { getRandomNum, tranclatePredicate } from '../src/utility.js';
+import getRandomNum from '../src/utility.js';
 import playGame from '../src/index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -17,10 +17,11 @@ const getQuestionAndAnswer = () => {
   const num = getRandomNum(1000);
 
   const question = String(num);
-  const isPrimeNum = isPrime(num);
-  const result = tranclatePredicate(isPrimeNum);
 
-  return [question, result];
+  const isPrimeNum = isPrime(num);
+  const answer = isPrimeNum ? 'yes' : 'no';
+
+  return [question, answer];
 };
 
 const startGame = () => {
