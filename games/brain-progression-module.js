@@ -1,4 +1,5 @@
 import { getRandomNum } from '../src/utility.js';
+import playGame from '../src/index.js';
 
 const gameRule = 'What number is missing in the progression?';
 const progressonLength = 10;
@@ -32,4 +33,8 @@ const getQuestionAndAnswer = () => {
   return [question, String(result)];
 };
 
-export { gameRule, getQuestionAndAnswer };
+const startGame = () => {
+  playGame(gameRule, getQuestionAndAnswer);
+};
+
+export default startGame;

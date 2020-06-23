@@ -4,22 +4,21 @@ const iterationsAmount = 3;
 const ask = (question) => readlineSync.question(`${question} `);
 const print = (text) => console.log(text);
 
-const playGame = (gameModule) => {
+const playGame = (gameRule, getQuestionAndAnswer) => {
   print('Welcome to the Brain Games!');
   const userName = ask('May I have your name?');
   print(`Hello, ${userName}!`);
 
-  if (!gameModule) return;
+  if (!gameRule) return;
 
-  const rule = gameModule.gameRule;
-  print(rule);
+  print(gameRule);
 
   let iterationNum = 0;
   let correct = true;
 
   do {
     iterationNum += 1;
-    const [question, correctAnswer] = gameModule.getQuestionAndAnswer();
+    const [question, correctAnswer] = getQuestionAndAnswer();
     print(`Question: ${question}`);
     const userAnswer = ask('Your answer:');
 

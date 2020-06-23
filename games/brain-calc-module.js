@@ -1,4 +1,5 @@
 import { getRandomNum } from '../src/utility.js';
+import playGame from '../src/index.js';
 
 const gameRule = 'What is the result of the expression?';
 
@@ -14,7 +15,7 @@ const getQuestion = (operationNum, num1, num2) => {
   }
 };
 
-const getResult = (operationNum, num1, num2) => {
+const getAnswer = (operationNum, num1, num2) => {
   switch (operationNum) {
     case 0:
       return num1 + num2;
@@ -32,9 +33,13 @@ const getQuestionAndAnswer = () => {
   const operationNum = getRandomNum(3);
 
   const question = getQuestion(operationNum, num1, num2);
-  const result = getResult(operationNum, num1, num2);
+  const answer = getAnswer(operationNum, num1, num2);
 
-  return [question, String(result)];
+  return [question, String(answer)];
 };
 
-export { gameRule, getQuestionAndAnswer };
+const startGame = () => {
+  playGame(gameRule, getQuestionAndAnswer);
+};
+
+export default startGame;
