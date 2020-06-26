@@ -4,9 +4,9 @@ import playGame from '../src/index.js';
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  if (num === 1) return false;
+  if (num < 2) return false;
 
-  for (let i = 2; i < Math.sqrt(num); i += 1) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) return false;
   }
 
@@ -18,8 +18,7 @@ const generateRoundData = () => {
 
   const question = String(num);
 
-  const isPrimeNum = isPrime(num);
-  const answer = isPrimeNum ? 'yes' : 'no';
+  const answer = isPrime(num) ? 'yes' : 'no';
 
   return [question, answer];
 };

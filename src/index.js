@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const iterationsAmount = 3;
+const totalRoundsCount = 3;
 const ask = (question) => readlineSync.question(`${question} `);
 const print = (text) => console.log(text);
 
@@ -11,7 +11,7 @@ const playGame = (gameRule, generateRoundData) => {
 
   print(gameRule);
 
-  for (let i = 0; i < iterationsAmount; i += 1) {
+  for (let i = 0; i < totalRoundsCount; i += 1) {
     const [question, correctAnswer] = generateRoundData();
     print(`Question: ${question}`);
     const userAnswer = ask('Your answer:');

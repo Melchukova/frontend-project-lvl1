@@ -10,8 +10,7 @@ const generateRoundData = () => {
 
   const question = String(num);
 
-  const isEvenNum = isEven(num);
-  const answer = isEvenNum ? 'yes' : 'no';
+  const answer = isEven(num) ? 'yes' : 'no';
 
   return [question, answer];
 };
