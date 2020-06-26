@@ -1,12 +1,12 @@
-import getRandomNum from '../src/utility.js';
+import { generateRandomNum } from '../src/utility.js';
 import playGame from '../src/index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
-const getQuestionAndAnswer = () => {
-  const num = getRandomNum(1000);
+const generateRoundData = () => {
+  const num = generateRandomNum(1000);
 
   const question = String(num);
 
@@ -17,7 +17,7 @@ const getQuestionAndAnswer = () => {
 };
 
 const startGame = () => {
-  playGame(gameRule, getQuestionAndAnswer);
+  playGame(gameRule, generateRoundData);
 };
 
 export default startGame;

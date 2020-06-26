@@ -4,7 +4,7 @@ const iterationsAmount = 3;
 const ask = (question) => readlineSync.question(`${question} `);
 const print = (text) => console.log(text);
 
-const playGame = (gameRule, getQuestionAndAnswer) => {
+const playGame = (gameRule, generateRoundData) => {
   print('Welcome to the Brain Games!');
   const userName = ask('May I have your name?');
   print(`Hello, ${userName}!`);
@@ -12,7 +12,7 @@ const playGame = (gameRule, getQuestionAndAnswer) => {
   print(gameRule);
 
   for (let i = 0; i < iterationsAmount; i += 1) {
-    const [question, correctAnswer] = getQuestionAndAnswer();
+    const [question, correctAnswer] = generateRoundData();
     print(`Question: ${question}`);
     const userAnswer = ask('Your answer:');
 

@@ -1,3 +1,4 @@
-const getRandomNum = (max) => Math.floor(Math.random() * (max + 1));
+const generateRandomNum = (max) => Math.floor(Math.random() * (max + 1));
 
-export default getRandomNum;
+// eslint-disable-next-line import/prefer-default-export
+export { generateRandomNum };
