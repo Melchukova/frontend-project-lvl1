@@ -21,8 +21,8 @@ make install link
 ```
 ____
 ### Описание и демонстрации
-| Игра | Описание |  |
-|----|:----:| ----:|
+| game-name | Описание | Демонстрация |
+|----|----|----|
 | __Brain-even__ | Определение четного числа. | [![asciicast](https://asciinema.org/a/Y0P3l0LMMeLVUkhlhdIbWMoT4.png)](https://asciinema.org/a/Y0P3l0LMMeLVUkhlhdIbWMoT4) |
 | __Brain-calc__ | Калькулятор. Арифметические выражения, которые необходимо вычислить. |[![asciicast](https://asciinema.org/a/uKa6pAX8dH99aVHWh4ZN5rFEN.png)](https://asciinema.org/a/uKa6pAX8dH99aVHWh4ZN5rFEN) |
 | __Brain-gcd__ | Определение наибольшего общего делителя. | [![asciicast](https://asciinema.org/a/QOaRbWvOs22X7dX0HdW5IF9BI.png)](https://asciinema.org/a/QOaRbWvOs22X7dX0HdW5IF9BI) |

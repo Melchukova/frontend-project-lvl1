@@ -3,7 +3,7 @@ import playGame from '../src/index.js';
 
 const gameRule = 'What is the result of the expression?';
 
-const calcExpressionResult = (operationNum, num1, num2) => {
+const calculate = (operationNum, num1, num2) => {
   switch (operationNum) {
     case '+':
       return num1 + num2;
@@ -25,7 +25,7 @@ const generateRoundData = () => {
 
   const question = `${num1} ${operator} ${num2}`;
 
-  const answer = calcExpressionResult(operator, num1, num2);
+  const answer = calculate(operator, num1, num2);
 
   return [question, String(answer)];
 };
