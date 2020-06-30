@@ -1,5 +1,5 @@
-import { generateRandomNum } from '../src/utility.js';
-import playGame from '../src/index.js';
+import { generateRandomNum } from '../utility.js';
+import playGame from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
 const progressonLength = 10;
@@ -13,22 +13,21 @@ const generateProgression = (progressonLen, startNum, step) => {
   return progression;
 };
 
-const hideElement = (progression, indOfHidedElement) => {
-  const replacementString = '..';
-  const progressionWithHidedElement = [...progression];
-  progressionWithHidedElement[indOfHidedElement] = replacementString;
-  return progressionWithHidedElement;
+const changeItem = (arr, indToChange, newItem = '..') => {
+  const changedArr = [...arr];
+  changedArr[indToChange] = newItem;
+  return changedArr;
 };
 
 const generateRoundData = () => {
-  const startNum = generateRandomNum(1000);
-  const step = generateRandomNum(100);
+  const startNum = generateRandomNum(0, 1000);
+  const step = generateRandomNum(0, 100);
 
   const progression = generateProgression(progressonLength, startNum, step);
 
-  const indOfHidedElement = generateRandomNum(progression.length - 1);
+  const indOfHidedElement = generateRandomNum(0, progression.length - 1);
 
-  const progressionWithHidedElement = hideElement(progression, indOfHidedElement);
+  const progressionWithHidedElement = changeItem(progression, indOfHidedElement);
   const question = progressionWithHidedElement.join(' ');
 
   const answer = progression[indOfHidedElement];

@@ -11,7 +11,7 @@ const playGame = (gameRule, generateRoundData) => {
 
   print(gameRule);
 
-  for (let i = 0; i < totalRoundsCount; i += 1) {
+  for (let round = 1; round <= totalRoundsCount; round += 1) {
     const [question, correctAnswer] = generateRoundData();
     print(`Question: ${question}`);
     const userAnswer = ask('Your answer:');

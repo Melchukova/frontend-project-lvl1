@@ -1,13 +1,13 @@
-import { generateRandomNum } from '../src/utility.js';
-import playGame from '../src/index.js';
+import { generateRandomNum } from '../utility.js';
+import playGame from '../index.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const calcGcd = (num1, num2) => (num2 === 0 ? num1 : calcGcd(num2, num1 % num2));
 
 const generateRoundData = () => {
-  const num1 = generateRandomNum(1000);
-  const num2 = generateRandomNum(1000);
+  const num1 = generateRandomNum(0, 1000);
+  const num2 = generateRandomNum(1, 1000);
 
   const question = `${num1} ${num2}`;
 

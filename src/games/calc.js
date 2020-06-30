@@ -1,5 +1,5 @@
-import { generateRandomNum } from '../src/utility.js';
-import playGame from '../src/index.js';
+import { generateRandomNum } from '../utility.js';
+import playGame from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
@@ -18,9 +18,9 @@ const calculate = (operationNum, num1, num2) => {
 };
 
 const generateRoundData = () => {
-  const num1 = generateRandomNum(1000);
-  const num2 = generateRandomNum(1000);
-  const operatorInd = generateRandomNum(operators.length);
+  const num1 = generateRandomNum(0, 1000);
+  const num2 = generateRandomNum(0, 1000);
+  const operatorInd = generateRandomNum(0, operators.length - 1);
   const operator = operators[operatorInd];
 
   const question = `${num1} ${operator} ${num2}`;
